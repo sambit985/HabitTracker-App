@@ -1,0 +1,63 @@
+.habit {
+  padding: 0.5em;
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.habitName {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+.habitCount {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.3rem;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  margin-right: 1em;
+  background-color: #319dd3;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.habitButton {
+  margin-right: 0.3em;
+  vertical-align: middle;
+  font-size: 2rem;
+  background-color: transparent;
+}
+
+.habitButton:hover {
+  opacity: 0.8;
+}
+
+.habitIncrease,
+.habitDecrease {
+  color: #38b21f;
+}
+
+/* Media Query */
+@media screen and (max-width: 540px) {
+  .habit {
+    font-size: 1.2rem;
+  }
+
+  .habitName {
+    margin-right: 0.5em;
+  }
+
+  .habitCount {
+    font-size: 0.9rem;
+    width: 1.8em;
+    height: 1.8em;
+    line-height: 1.8em;
+    margin-right: 1.6em;
+  }
+
+  .habitButton {
+    margin-right: 0.3em;
+    font-size: 1.6rem;
+  }
+}
