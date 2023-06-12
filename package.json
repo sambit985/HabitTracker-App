@@ -1,8 +1,6 @@
 {
   "name": "template",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://jo-soyoung.github.io/habit-tracker/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
     "@testing-library/jest-dom": "^5.11.4",
