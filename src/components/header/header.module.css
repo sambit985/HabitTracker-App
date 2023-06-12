@@ -1,0 +1,45 @@
+.header {
+  padding: 3em;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 0.2em;
+  font-size: 2rem;
+  color: #396f57;
+}
+
+.header p {
+  margin-bottom: 1.5em;
+  font-weight: 300;
+  color: #646368;
+}
+
+.headerCountAnnounce {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.headerCount {
+  color: #cc7f41;
+}
+
+/* Media Query */
+@media screen and (max-width: 540px) {
+  .header {
+    padding: 2em 1.5em;
+  }
+
+  .header h1 {
+    margin-bottom: 0.2em;
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    margin-bottom: 0.8em;
+  }
+
+  .headerCountAnnounce {
+    font-size: 1.2rem;
+  }
+}

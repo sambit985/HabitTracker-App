@@ -1,0 +1,23 @@
+.addForm {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.addInput,
+.addButton {
+  padding: 0.2em 0.5em;
+  font-size: 1.5rem;
+  border: 1.3px solid #272926;
+}
+
+.addInput {
+  width: 100%;
+  border-radius: 2px 0px 0px 2px;
+}
+
+.addButton {
+  background-color: #272926;
+  color: #fff;
+  border-radius: 0px 2px 2px 0px;
+}
