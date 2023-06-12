@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, lazy, Suspense } from 'react';
 import './app.css';
-import Habits from './components/habits/habits';
-import Header from './components/header/header';
+
+const LazyHabits = lazy(() => import('./components/habits/habits'));
+const LazyHeader = lazy(() => import('./components/header/header'));
 
 const App = () => {
-  //useState
+  // useState
   const [habits, setHabits] = useState([]);
 
-  //useEffect
+  // useEffect
   useEffect(() => {
     getLocalHabits();
   }, []);
@@ -74,15 +75,17 @@ const App = () => {
 
   return (
     <div className="container">
-      <Header totalCount={habits.filter(item => item.count > 0).length} />
-      <Habits
-        habits={habits}
-        onIncrement={handleIncrement}
-        onDecrement={handleDecrement}
-        onDelete={handleDelete}
-        onAdd={handleAdd}
-        onReset={handleReset}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyHeader totalCount={habits.filter(item => item.count > 0).length} />
+        <LazyHabits
+          habits={habits}
+          onIncrement={handleIncrement}
+          onDecrement={handleDecrement}
+          onDelete={handleDelete}
+          onAdd={handleAdd}
+          onReset={handleReset}
+        />
+      </Suspense>
     </div>
   );
 };
