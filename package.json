@@ -22,5 +22,8 @@
     "react-dom": "^18.2.0",
     "typescript": "^4.9.5",
     "vite": "^4.1.1"
+  },
+    "buildOptions": {
+    "chunkSizeWarningLimit": 2000
   }
 }
